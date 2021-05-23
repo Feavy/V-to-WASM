@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V to WASM</title>
 </head>
+
 <body>
     <script src="dist/main.js"></script>
+    <script>
+        const before = performance.now();
+        console.log("JS")
+        console.log(fibonacci(40));
+        console.log(performance.now() - before);
+
+        function fibonacci(n) {
+            if (n == 0) {
+                return 0;
+            } else if (n == 1) {
+                return 1;
+            } else {
+                return fibonacci(n - 1) + fibonacci(n - 2);
+            }
+        }
+    </script>
 </body>
+
 </html>

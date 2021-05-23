@@ -1,6 +1,7 @@
 import time
 
 fn main() {
+	println("V WASM")
 	before := time.now().unix_time_milli()
 	println(fibonacci(40))
 	println(time.now().unix_time_milli() - before)
