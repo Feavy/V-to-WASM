@@ -1,2 +1,5 @@
-dist
+static
 main.c
+node_modules
+.cache
+dist
