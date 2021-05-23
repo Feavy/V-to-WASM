@@ -3,3 +3,4 @@ main.c
 node_modules
 .cache
 dist
+src/assets/main**

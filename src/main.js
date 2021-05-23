@@ -3,8 +3,7 @@ import { WASI } from '@wasmer/wasi'
 import browserBindings from '@wasmer/wasi/lib/bindings/browser'
 import { WasmFs } from '@wasmer/wasmfs'
 
-const wasmFilePath = 'main.wasm'  // Path to our WASI module
-const echoStr      = 'Hello World!'    // Text string to echo
+import wasmFilePath from "./assets/main.wasmi";
 
 // Instantiate new WASI and WasmFs Instances
 // IMPORTANT:
@@ -16,7 +15,7 @@ let wasi = new WASI({
   // Arguments passed to the Wasm Module
   // The first argument is usually the filepath to the executable WASI module
   // we want to run.
-  args: [wasmFilePath, echoStr],
+  args: [wasmFilePath],
 
   // Environment variables that are accesible to the WASI module
   env: {},
