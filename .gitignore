@@ -1,2 +1,4 @@
 dist
 main.c
+node_modules
+static
