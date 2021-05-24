@@ -11,6 +11,9 @@
 <body>
     <script src="dist/main.js"></script>
     <script>
+        Module['onRuntimeInitialized'] = function() {
+            Module._main__hello();
+         };
         const before = performance.now();
         console.log("JS")
         console.log(fibonacci(40));

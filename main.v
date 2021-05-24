@@ -1,10 +1,13 @@
 import time
 
+fn C.helloJavascript()
+
 fn main() {
 	println("V WASM")
 	before := time.now().unix_time_milli()
 	println(fibonacci(40))
 	println(time.now().unix_time_milli() - before)
+	C.helloJavascript()
 }
 
 fn fibonacci(n int) int {
@@ -15,4 +18,8 @@ fn fibonacci(n int) int {
 	} else {
 		return fibonacci(n - 1) + fibonacci(n - 2)
 	}
+}
+
+pub fn hello() {
+	println("Hello from V!")
 }
